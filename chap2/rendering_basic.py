@@ -73,7 +73,7 @@ images = renderer(mesh, lights=lights, )
 
 plt.figure(figsize=(10, 10))
 plt.imshow(images[0, ..., :3].cpu().numpy())
-plt.axis("off");
+plt.axis("off")
 plt.savefig('light_at_back.png')
 
 lights.location = torch.tensor([0.0, 0.0, +1.0], device=device)[None]
